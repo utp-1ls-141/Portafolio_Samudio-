@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parcial2 MAURETH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="./static/Vendor/Bootstrap/css/bootstrap.min.css">
+    
+    <style>
+        .modal-header{
+          color:rgb(221, 59, 159);
+        }
+        .modal-body p{
+          color:rgb(255, 126, 6); 
+          font-weight: bold;
+          text-align: center;
+          height: 95px;
+          width: 100%;
+          overflow-y: auto;
+        }
+        .modal-footer{
+          background-color:rgb(71, 26, 161);
+          color:antiquewhite;
+        }
+      </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="indexmau.html">Maureth Samudio </a>
+    </nav>
+
+    <div class="container-fluid">
+       
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-sm-6  offset-sm-3  col-xs-12">
+                <div class="card shadow-lg mt-3 rounded ">
+                    <div class="card-header bg-info">
+                        <h4 class="text-white">Números primos:</h4>
+                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sumatoria de todos los numeros primos debajo de 1,000,000</h5>
+                            <input type="button" value="Resultado" class="form-control btn-primary" onclick="esPrimo()" tabindex="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-8 offset-md-2 col-sm-6  offset-sm-3  col-xs-12">
+                <div class="card shadow-lg mt-3 rounded">
+                    <div class="card-header bg-info">
+                        <h4 class="text-white"> 100 primeros numeros</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Secuencia Fibronacci:</h5>
+                        <br>
+                        <input type="button" value="Resultado" class="form-control btn-primary" onclick="secuencia()" tabindex="5">
+                    </div>
+                </div>
+            </div>
+           
+            <!--MODAL-->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"> Resultado: </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-dark" id="info"></p>
+                            <br>
+                            <p id="primo"></p>
+                            <p id="secuencia"></p>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok!!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <script src="./static/Vendor/jquery/jquery-3.3.1.min.js"></script>
+        <script src="./static/Vendor/Bootstrap/js/bootstrap.min.js"></script>
+        <script src="./static/js/mainmau.js"></script>
+
+</body>
+</html>
